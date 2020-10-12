@@ -83,7 +83,7 @@ glyphicon glyphicon-log-out"></span>
 								<ul>
 									<li><a href="view_inventories.jsp">Inventories</a></li>
 									<li><a href="AddInventory.jsp">Add Inventory</a></li>
-									<li><a href="#">Request For Repair</a></li>
+								
 									<li><a href="#">Report</a></li>
 
 									</a>
@@ -130,9 +130,6 @@ glyphicon glyphicon-log-out"></span>
 								<th>Sup ID</th>
 								<th>Description</th>
 								<th>N.O.P</th>
-
-
-								<th></th>
 								<th></th>
 
 
@@ -141,65 +138,59 @@ glyphicon glyphicon-log-out"></span>
 
 							</tr>
 
-						</thead>
-						<%
-            String id= request.getParameter("id");
-            System.out.println(id);
+						</thead>  							
+            <%
+           
             IInventoryService iInventoryservice = new InventoryServiceimpl();
 			ArrayList<Inventory> arrayList = iInventoryservice.get_Inventory_details();
 				
 			
 			for(Inventory invetory : arrayList){
 			%>
-
-						<tbody>
-							<tr>
-
-								<td><%=invetory.getCarID() %></td>
-
-								<td><%=invetory.getModel() %></td>
-								<td><%=invetory.getCategory() %></td>
-
-								<td><%=invetory.getSupplierID() %></td>
-								<td><%=invetory.getDescription() %></td>
-								<td><%=invetory.getNoOfPassengers() %></td>
-
-
-
+			
+			 <tbody>
+			 <tr>
+			 
+				<td> <%=invetory.getCarID() %> </td>
+				
+				<td> <%=invetory.getModel() %> </td>
+				<td> <%=invetory.getCategory() %> </td>
+				
+				<td> <%=invetory.getSupplierID() %> </td>
+				<td> <%=invetory.getDescription() %> </td>
+				<td> <%=invetory.getNoOfPassengers() %> </td>
+				
 
 
-								<td><a
-									href="update_inventory.jsp?CarID=<%=invetory.getCarID() %>"><button>Update</button></a></td>
-
-
-								<td><form method="POST"
-										action="DeleteInventoryServlet?CarID=<%=invetory.getCarID() %>">
-										<button>Delete</button>
-									</form></td>
-
-
-
-
-
-
-							</tr>
-						</tbody>
-
-
-
-
-						<%	
+										
+				
+				<td><a href="update_inventory.jsp?CarID=<%=invetory.getCarID() %>"><button >Update</button></a>
+					<form method="POST" action="DeleteInventoryServlet?CarID=<%=invetory.getCarID() %>"><button>Delete</button></form>
+					<form method="POST" action="DeleteInventoryServlet?CarID=<%=invetory.getCarID() %>"><button>Request for repair</button></form>
+				</td>
+				
+				
+			
+					
+			</tr>
+			 </tbody>
+				
+			
+						
+					
+			<%	
 			   }
-            %>
-					</table>
+            %>     
+		</table>
 
 
 
 
 
 
-
-					<br> <br>
+				
+					<br>
+					<br>
 
 				</div>
 
