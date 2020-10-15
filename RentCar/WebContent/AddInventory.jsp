@@ -40,7 +40,7 @@
 						<h5 class="card-title mb-0 text-center">Inventory Manager</h5>
 					</div>
 					<div class="card-body text-center">
-						<br> <img src="images/avatar7.png" alt="Inventory manager"
+						<br> <img src="images/user.png" alt="Inventory manager"
 							class="img-fluid rounded-circle mb-2" width="135" height="128">
 						<h4 class="card-title mb-0"></h4>
 						<br>
@@ -51,8 +51,9 @@
 								<div>
 
 
-									<a class="btn btn-primary btn-sm" href="Adminlogin.jsp">Logout
-										<span class="
+									<a class="btn btn-primary btn-sm"
+										href="UserViewRegistration.jsp">Logout <span
+										class="
 glyphicon glyphicon-log-out"></span>
 									</a>
 
@@ -71,8 +72,8 @@ glyphicon glyphicon-log-out"></span>
 								<ul>
 									<li><a href="view_inventories.jsp">Inventories</a></li>
 									<li><a href="AddInventory.jsp">Add Inventory</a></li>
-									<li><a href="#">Request For Repair</a></li>
-									<li><a href="#">Report</a></li>
+									
+									<li><a href="UserViewMyEvent.jsp">Report</a></li>
 
 									</a>
 
@@ -104,7 +105,8 @@ glyphicon glyphicon-log-out"></span>
 					</div>
 
 
-					<br> <br>
+					<br>
+					<br>
 
 
 
@@ -141,12 +143,9 @@ glyphicon glyphicon-log-out"></span>
 								<label class="col-lg-2 col-lg-offset-2 control-label"
 									for="product_name">Car ID</label>
 								<div class="col-md-6">
-									<input id="carID" name="cardid" placeholder="Car ID"
-										pattern="[A-Z]{2}[0-9]{3}"
-										title="Should start with 2 characters and 3 digits"
-										maxlength="5" class="form-control input-md" required=""
-										type="text">
-
+									<input id="carID" name="cardid" placeholder="Car ID" pattern="[A-Za-z]{2}[0-9]{3}"
+										title="Should start with 2 characters and 3 digits" maxlength="5" class="form-control input-md" required="" type="text">
+								
 								</div>
 							</div>
 
@@ -172,7 +171,7 @@ glyphicon glyphicon-log-out"></span>
 										<option value="Zip">Zip</option>
 										<option value="Premier">Premier</option>
 
-									</select> </select>
+									</select>
 								</div>
 							</div>
 
@@ -181,7 +180,8 @@ glyphicon glyphicon-log-out"></span>
 									for="available_quantity">Supplier ID</label>
 								<div class="col-md-6">
 									<input id="sup_ID" name="supid" placeholder="Supplier ID"
-										class="form-control input-md" type="text">
+										class="form-control input-md" required="" type="text">
+										
 
 								</div>
 							</div>
@@ -194,7 +194,7 @@ glyphicon glyphicon-log-out"></span>
 										name="description" required=""></textarea>
 								</div>
 							</div>
-							<div class="form-group">
+                            <div class="form-group">
 								<label class="col-lg-2 col-lg-offset-2 control-label"
 									for="product_name_fr">Image URl</label>
 								<div class="col-md-6">
@@ -218,7 +218,8 @@ glyphicon glyphicon-log-out"></span>
 
 
 
-							<br> <br>
+							<br>
+							<br>
 
 							<div class="form-group">
 
